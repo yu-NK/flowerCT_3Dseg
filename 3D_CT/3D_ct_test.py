@@ -7,7 +7,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 if __name__ == "__main__":
     
-    ORA_3d_axial = np.zeros((888,914,857))
+    #ORA_3d_axial = np.zeros((888,857,915))
     
     x = np.empty(0)
     y = np.empty(0)
@@ -23,9 +23,9 @@ if __name__ == "__main__":
         #閾値設定
         threshold_value = 60
     
-        for x_c in range(857):
-            for y_c in range(914):
-                if(img[x_c,y_c] >= threshold_value):
+        for y_c in range(858):
+            for x_c in range(915):
+                if(img[y_c,x_c] >= threshold_value):
                     #ORA_3d_axial[z][y][x] = 1
                     x_list.append(x_c)
                     y_list.append(y_c)
