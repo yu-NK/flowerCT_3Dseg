@@ -18,7 +18,7 @@ if __name__ == "__main__":
     z_list = z.tolist()
     
     for z_c in range(887):
-        img = cv2.imread('../flower_CT_photo/ORA/[vg-data] ORA/volume_1/ORA-{0:03d}.tif'.format(z_c),0)
+        img = cv2.imread('../../flower_CT_photo/ORA/[vg-data] ORA/volume_1/ORA-{0:03d}.tif'.format(z_c),0)
     
         #閾値設定
         threshold_value = 60
@@ -52,4 +52,4 @@ if __name__ == "__main__":
 
     pcd.points = o3d.Vector3dVector(xyz)
 
-    o3d.write_point_cloud("../output/ORA_axial.ply", pcd)
+    o3d.write_point_cloud("../../output/ORA_axial.ply", pcd)
